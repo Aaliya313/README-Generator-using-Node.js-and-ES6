@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const path = require("path");
+//const path = require("path"); //removed this as not used
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -74,8 +74,14 @@ const questions = [
 ];
 
 // function to write README file and throws and error if something is wrong and informs the user
+//trying something alternative without using path
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("Success! Your README.md file has been generated")
+    });
 }
 
 // function to initialize program
