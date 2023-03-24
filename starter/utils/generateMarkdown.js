@@ -1,3 +1,10 @@
+//Creating a function to display license badge 
+function LicenseBadge(license) {
+  
+}
+
+
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
