@@ -63,8 +63,14 @@ const questions = [
     type: "input",
     name: "questions",
     message: "Provide a valid email address.",
+    validate: function (responses) {
+        if (responses.length < 1) {
+            return console.log("Please type in a valid email: ")
+        }
+        return true;
    
   },
+}
 ];
 
 // function to write README file and throws and error if something is wrong and informs the user
