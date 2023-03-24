@@ -17,12 +17,12 @@ const questions = [
   },
   {
     type: "input",
-    name: "Table of contents",
+    name: "tableOfContents",
     message: "Please provide the table of contents"
   },
   {
     type: "input",
-    name: "Installation",
+    name: "installation",
     message: "Please provide instructions of installation"
   },
   {
@@ -50,24 +50,27 @@ const questions = [
   },
   {
     type: "input",
-    name: "Questions",
+    name: "questions",
     message: "Write your GitHub username.",
   },
   {
     type: "input",
-    name: "Questions",
+    name: "questions",
     message: "Provide a valid email address.",
   },
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-  
+    
 }
 
 // function to initialize program
 function init() {
- 
+    inquirer.prompt(questions).then((responses) => {
+        console.log("Creating Professional README.md File...");
+        writeToFile("./dist/README.md", generateMarkdown({ ...responses })); //put the generated readme in that folder
+      });
 }
 
 // function call to initialize program
