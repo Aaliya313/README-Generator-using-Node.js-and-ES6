@@ -1,13 +1,18 @@
 //Creating a function to display license badge 
 function LicenseBadge(license) {
-  
+  if (license !== "none") {
+    return `![Github license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return "";
 }
 
 
 
 // function to generate markdown for README
+//Implemented license function at the top as the requirements state that the license should be at the top
 function generateMarkdown(data) {
   return `# ${data.title}
+${LicenseBadge(data.license)} 
 ## Description
 ${data.description}
 ## Table of Contents

@@ -52,15 +52,22 @@ const questions = [
     type: "input",
     name: "questions",
     message: "Write your GitHub username.",
+    validate: function (responses) {
+        if (responses.length < 1) {
+            return console.log("Please type in a valid username: ")
+        }
+        return true;
+    }
   },
   {
     type: "input",
     name: "questions",
     message: "Provide a valid email address.",
+   
   },
 ];
 
-// function to write README file
+// function to write README file and throws and error if something is wrong and informs the user
 function writeToFile(fileName, data) {
     
 }
