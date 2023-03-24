@@ -2,6 +2,8 @@
 ![Github license](https://img.shields.io/badge/license--blue.svg) 
 ## Description
 The task was to create an automatic way to generate a readme file using NodeJS and ES6.
+## Walkthrough Video link:
+https://drive.google.com/file/d/1ZOtfEzaXKLT16JwWJ3LuflMU26u8MZiE/view
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
